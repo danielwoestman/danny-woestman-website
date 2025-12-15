@@ -10,7 +10,7 @@ const projects: Project[] = [
     description: 'Implemented strategic plan with 40+ student facilitators, created Dual Language department, and helped support new long term financial health and stability.',
     year: '2022-Present',
     link: '#',
-    image: './warren-hs-illustration.png'
+    image: './warren.jpg'
   },
   {
     id: '2',
@@ -19,7 +19,7 @@ const projects: Project[] = [
     description: 'Achieved "Great Place to Work" certification, oversaw Advanced Technology Center construction, and increased graduation rates.',
     year: '2016-2022',
     link: '#',
-    image: 'https://picsum.photos/seed/classroom_technology/800/600'
+    image: './belvidere.jpg'
   },
   {
     id: '3',
@@ -28,7 +28,7 @@ const projects: Project[] = [
     description: 'Chief Quality Officer overseeing #1 ranked middle school, strategic planning, and process improvement across all departments.',
     year: '2013-2016',
     link: '#',
-    image: 'https://picsum.photos/seed/student_learning/800/600'
+    image: './rockford.jpg'
   },
   {
     id: '4',
@@ -37,7 +37,7 @@ const projects: Project[] = [
     description: 'Supervised curricular teams, AP testing growth, and compliance reporting. Leadership in academic intervention programs.',
     year: '2008-2011',
     link: '#',
-    image: 'https://picsum.photos/seed/books_library/800/600'
+    image: './hononegah.jpg'
   }
 ];
 
@@ -106,9 +106,8 @@ const Projects: React.FC = () => {
                   alt={project.title} 
                   className="w-full h-full object-cover mix-blend-multiply" 
                   onError={(e) => {
-                    // Fallback to a red brick school building if local file is missing
-                    // This ensures it still looks like Warren HS even if the file isn't uploaded yet
-                    e.currentTarget.src = "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=800&auto=format&fit=crop";
+                    // Fallback to random seeds if local files are missing
+                    e.currentTarget.src = `https://picsum.photos/seed/${project.id}/800/600`;
                   }}
                 />
               </div>

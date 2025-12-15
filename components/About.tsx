@@ -9,9 +9,12 @@ const About: React.FC = () => {
         {/* Left Column: Image/Stats */}
         <div className="bg-gray-100 p-8 md:p-16 flex flex-col justify-between min-h-[600px] border-b md:border-b-0 md:border-r border-black/10 relative overflow-hidden group">
             <img 
-               src="https://picsum.photos/seed/university_library/1000/1200?grayscale" 
+               src="./profile.jpg" 
                alt="Dr. Danny Woestman" 
                className="absolute inset-0 w-full h-full object-cover opacity-100 mix-blend-multiply transition-transform duration-700 group-hover:scale-105"
+               onError={(e) => {
+                 e.currentTarget.src = "https://picsum.photos/seed/university_library/1000/1200?grayscale";
+               }}
             />
             <div className="relative z-10">
               <span className="inline-block bg-black text-white px-4 py-1 rounded-full text-xs font-mono uppercase tracking-widest">
