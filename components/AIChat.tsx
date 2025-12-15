@@ -82,7 +82,7 @@ const AIChat: React.FC = () => {
                  onClick={() => setInputValue(suggestion)}
                  className="text-left text-sm font-mono text-gray-500 hover:text-white hover:bg-white/10 p-2 rounded transition-colors border-l-2 border-transparent hover:border-orange-500"
                >
-                 > {suggestion}
+                 &gt; {suggestion}
                </button>
              ))}
            </div>
